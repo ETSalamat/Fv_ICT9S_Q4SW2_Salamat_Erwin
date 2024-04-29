@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+
+	<title>Q4 Seatwork 2</title>
+
+	<style>
+		body{
+		
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+		#Reference{
+			font-family: Tw Cen MT;
+			color: dimgray;
+			font-size: 18px;
+		}
+	</style>
+</head>
+<body>
+	<center>
+		<h1 style="background: white; border-color: darkgrey; border-style: none none solid none; padding: 27px; font-family: Tw Cen MT; font-size:38px;">Try out the calculator below this text!</h1> 
+	</center>
+	<br>
+<div class="row">
+	<div class="col-md-2">
+		<center><p style="font-size:150px; color: #7E51B9;">●</p></center>
+	</div>
+
+	<div id="calculator" class="col-md-8">
+	<center>
+	
+		<form style="border-color: black; border-style: solid ; border-width: 5px; border-radius: 10px; font-family: Tw Cen MT; background-color:#DCE4E6 ; font-size: 25px; " class="form-group">
+			<br>
+			<label id="num1">Enter a value for X</label>
+				<input type="number" class="form-control bg-secondary" style="width:400px;" id="input1" placeholder="Enter here">
+			<label id="num2">Enter a value for Y</label>
+				<input type="number" class="form-control bg-secondary" style="width:400px;" id="input2" placeholder="Enter here">
+			<a id="Reference" href="https://docs.google.com/document/d/1SZ93bAYVTafnHtR0r0W8QtUv9RhHKlVQNqyXVfgCrdw/edit?usp=sharing">References</a>
+				<br><br>
+		</form>
+	</center>		
+	</div>
+
+	<div class="col-md-2">
+		<br><br><br><br>
+		<center>
+			<strong><p style="font-size: 20px;  font-family: Tw Cen MT;" ><span style="font-size: 30px; ">0</span><br>Answers</p></strong>
+		</center>
+	</div>
+	
+	<div class="container" style="text-align: center;">
+		<form>	
+			<button class="btn btn-danger text-white" style="width:525px; height: 110px; font-family: Tw Cen MT; font-size: 40px;" id="button1" onclick="add()">▲ Sum of X and Y</button>
+			<button class="btn btn-primary text-white" style="width:525px; height: 110px; font-family: Tw Cen MT; font-size: 40px;" id="button2" onclick="product()">◆ Product of X and Y</button>
+			<button class="btn btn-warning text-white" style="width:525px; height: 110px; font-family: Tw Cen MT; font-size: 40px;" id="button2" onclick="quotient()">● Quotient of X and Y</button>
+			<button class="btn btn-success text-white" style="width:525px; height: 110px; font-family: Tw Cen MT; font-size: 40px;" id="button3" onclick="compare()">■ Is X greater than Y</button>
+		</form>
+	</div>
+
+</div>
+	<script type="text/javascript">
+		function add(){
+			var num1 = document.getElementById("input1").value; //assign value
+			var num2 = document.getElementById("input2").value; //assign value
+			var sum = Number(num1) + Number(num2); //add the numbers
+
+			window.alert("The sum of X and Y is: " + sum);
+		}
+		function product(){
+			var num1 = document.getElementById("input1").value; //assign value
+			var num2 = document.getElementById("input2").value; //assign value
+			var product = Number(num1) * Number(num2); //multiply the numbers
+
+			window.alert("The product of X and Y is: " + product);
+		}	
+		function quotient(){
+			var num1 = document.getElementById("input1").value; //assign value
+			var num2 = document.getElementById("input2").value; //assign value
+			var quotient = Number(num1) / Number(num2); //divide the numbers
+
+			window.alert("The quotient of X and Y is: " + quotient);
+		}	
+		function compare(){
+			var num1 = document.getElementById("input1").value; //assign value
+			var num2 = document.getElementById("input2").value; //assign value
+			var compare = Number(num1) > Number(num2); //compare the numbers
+
+			window.alert("Is X greater than Y: " + compare);
+		}			
+	</script>
+</body>
+</html>
